@@ -17,7 +17,6 @@ function App() {
                     <Cart />
                 </Route>
             </Switch>
-            <h1>Home Page</h1>
         </div>
     )
 }
