@@ -1,4 +1,5 @@
 import React, {useState, useContext} from "react"
+import PropTypes from "prop-types"
 import {Context} from "../Context"
 
 function Image({className, img}) {
@@ -12,6 +13,7 @@ function Image({className, img}) {
         return <i className="ri-heart-line favorite" onClick={() => toggleFavorite(img.id)}></i>
     }
   }
+  
   const cartIcon = hovered && <i className="ri-add-circle-line cart"></i>
 
   return (
@@ -25,6 +27,15 @@ function Image({className, img}) {
       {cartIcon}
     </div>
   )
+}
+
+Image.propTypes = {
+  className : PropTypes.string,
+  img : PropTypes.shape({
+    url:PropTypes.string,
+    id:PropTypes.number,
+    isFavorite:PropTypes.bool
+  })
 }
 
 export default Image
