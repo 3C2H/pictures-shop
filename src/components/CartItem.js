@@ -23,7 +23,7 @@ function CartItem({item}) {
   )
 }
 
-CartItem.PropTypes = {
+CartItem.propTypes = {
   item: PropTypes.shape({
     url: PropTypes.string.isRequired
   })
