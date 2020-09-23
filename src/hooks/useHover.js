@@ -1,7 +1,6 @@
 import {useState, useEffect, useRef} from "react"
 
 function useHover () {
-
   const [hovered, setHovered] = useState(false)
   const ref = useRef(null)
 
@@ -20,7 +19,6 @@ function useHover () {
     return () => {
       ref.current.removeEventListener("mouseenter", enter)
       ref.current.removeEventListener("mouseleave", leave)
-
     }
   }, [])
 
