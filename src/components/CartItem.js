@@ -1,6 +1,7 @@
 import React, {useState, useContext} from "react"
 import {Context} from "../Context"
 import useHover from "../hooks/useHover"
+import PropTypes from "prop-types"
 
 function CartItem({item}) {
 
@@ -20,6 +21,12 @@ function CartItem({item}) {
       <p>$5.99</p>
     </div>
   )
+}
+
+CartItem.PropTypes = {
+  item: PropTypes.shape({
+    url: PropTypes.string.isRequired
+  })
 }
 
 export default CartItem
